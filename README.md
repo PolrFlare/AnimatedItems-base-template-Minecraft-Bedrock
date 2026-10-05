@@ -1,0 +1,1 @@
+# AnimatedItems-base-template-Minecraft-Bedrock
