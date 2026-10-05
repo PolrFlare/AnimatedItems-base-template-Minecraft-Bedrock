@@ -3,6 +3,7 @@
 Special thanks to **Ambiennt** for the flipbook/animated-item geometries and much of the first-person item animation math used in this pack.
 
 [Ambiennt — GitHub](https://github.com/ambiennt)
+[Ambiennt — YouTube](https://www.youtube.com/@ambiennt)
 
 Thanks to **CrisXolt** for the insight and methodology behind rendering animated items in the inventory.
 
