@@ -1,0 +1,19 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§oPolrFlare\n§n§7http://packs.xenonmc.net/",
+        "name": "§l§o§fAnimated Items (base template)",
+        "uuid": "68dacc07-1446-420b-aea8-62cf5541b1e9",
+        "version": [3, 0, 0],
+        "min_engine_version": [1, 14, 0],
+        "vanilla": [1, 14, 0]
+    },
+    "modules": [
+        {
+            "description": "polr",
+            "type": "resources",
+            "uuid": "bc66b004-8191-4f9b-a2e8-e1ebb2da94e8",
+            "version": [0, 0, 1]
+        }
+    ]
+ }

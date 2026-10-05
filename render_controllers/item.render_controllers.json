@@ -1,0 +1,115 @@
+{
+  "format_version": "1.10",
+  "render_controllers": {
+    "controller.render.flint_and_steel": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.item_frames": [
+              "texture.item_frame_1",
+              "texture.item_frame_2",
+              "texture.item_frame_3",
+              "texture.item_frame_4",
+              "texture.item_frame_5",
+              "texture.item_frame_6",
+              "texture.item_frame_7",
+              "texture.item_frame_8",
+              "texture.item_frame_9",
+              "texture.item_frame_10",
+              "texture.item_frame_11",
+              "texture.item_frame_12"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? material.enchanted : material.default"
+        }
+      ],
+      "textures": [ "temp.frame = math.mod(math.floor(query.time_stamp * 0.87), 24); return array.item_frames[temp.frame];", "texture.enchanted" ],
+      "ignore_lighting": true
+    },
+    "controller.render.ender_pearl": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.item_frames": [
+              "texture.item_frame_1",
+              "texture.item_frame_2",
+              "texture.item_frame_3",
+              "texture.item_frame_4",
+              "texture.item_frame_5",
+              "texture.item_frame_6",
+              "texture.item_frame_7",
+              "texture.item_frame_8",
+              "texture.item_frame_9",
+              "texture.item_frame_10",
+              "texture.item_frame_11",
+              "texture.item_frame_12",
+              "texture.item_frame_13",
+              "texture.item_frame_14",
+              "texture.item_frame_15",
+              "texture.item_frame_16",
+              "texture.item_frame_17",
+              "texture.item_frame_18",
+              "texture.item_frame_19",
+              "texture.item_frame_20",
+              "texture.item_frame_21",
+              "texture.item_frame_22",
+              "texture.item_frame_23",
+              "texture.item_frame_24",
+              "texture.item_frame_25"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? material.enchanted : material.default"
+        }
+      ],
+      "textures": [ "temp.frame = math.mod(math.floor(query.time_stamp * 0.87), 24); return array.item_frames[temp.frame];", "texture.enchanted" ],
+      "ignore_lighting": true
+    },
+    "controller.render.ender_pearl_entity": {
+      "geometry": "geometry.entity",
+      "arrays": {
+        "textures": {
+          "array.item_frames": [
+              "texture.item_frame_1",
+              "texture.item_frame_2",
+              "texture.item_frame_3",
+              "texture.item_frame_4",
+              "texture.item_frame_5",
+              "texture.item_frame_6",
+              "texture.item_frame_7",
+              "texture.item_frame_8",
+              "texture.item_frame_9",
+              "texture.item_frame_10",
+              "texture.item_frame_11",
+              "texture.item_frame_12",
+              "texture.item_frame_13",
+              "texture.item_frame_14",
+              "texture.item_frame_15",
+              "texture.item_frame_16",
+              "texture.item_frame_17",
+              "texture.item_frame_18",
+              "texture.item_frame_19",
+              "texture.item_frame_20",
+              "texture.item_frame_21",
+              "texture.item_frame_22",
+              "texture.item_frame_23",
+              "texture.item_frame_24",
+              "texture.item_frame_25"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? material.enchanted : material.default"
+        }
+      ],
+      "textures": [ "temp.frame = math.mod(math.floor(query.time_stamp * 0.87), 24); return array.item_frames[temp.frame];", "texture.enchanted" ],
+      "ignore_lighting": true
+    }
+  }
+}

@@ -1,0 +1,9 @@
+// fill in the ids with YOUR GAME VERSION'S IDS
+// you can use this pack to figure out what your item ids are: https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
+{
+  "$item_id_ender_pearl": 448,
+  "$item_texture_ender_pearl": "textures/items/flipbook/ender_pearl/ender_pearl",
+
+  "$item_id_flint_and_steel": 323,
+  "$item_texture_flint_and_steel": "textures/items/flipbook/flint_and_steel/flint_and_steel"
+}

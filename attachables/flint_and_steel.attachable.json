@@ -1,0 +1,40 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:attachable": {
+		"description": {
+            "min_engine_version": "1.8.0",
+			"identifier": "minecraft:flint_and_steel",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+                "default": "textures/items/flint_and_steel",
+                "item_frame_1": "textures/items/flipbook/flint_and_steel/frame_1",
+                "item_frame_2": "textures/items/flipbook/flint_and_steel/frame_2",
+                "item_frame_3": "textures/items/flipbook/flint_and_steel/frame_3",
+                "item_frame_4": "textures/items/flipbook/flint_and_steel/frame_4",
+                "item_frame_5": "textures/items/flipbook/flint_and_steel/frame_5",
+                "item_frame_6": "textures/items/flipbook/flint_and_steel/frame_6",
+                "item_frame_7": "textures/items/flipbook/flint_and_steel/frame_7",
+                "item_frame_8": "textures/items/flipbook/flint_and_steel/frame_8",
+                "item_frame_9": "textures/items/flipbook/flint_and_steel/frame_9",
+                "item_frame_10": "textures/items/flipbook/flint_and_steel/frame_10",
+                "item_frame_11": "textures/items/flipbook/flint_and_steel/frame_11",
+                "item_frame_12": "textures/items/flipbook/flint_and_steel/frame_12"
+			},
+            "geometry": {
+                "default": "geometry.items"
+            },
+            "animations": {
+                "wield": "animation.items.wieldv2" // if you were making an attachable for the iron_sword for example, you would use wieldv1, not wieldv2 (refer to animations/items.wield.animation.json)
+            },
+            "scripts": {
+                "animate": [
+                "wield"
+                ]
+            },
+            "render_controllers": [ "controller.render.flint_and_steel" ]
+        }
+    }
+}

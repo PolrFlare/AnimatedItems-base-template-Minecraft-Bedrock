@@ -1,0 +1,44 @@
+// wieldv1: for items that are considered tools (swords, axes, pickaxes, shovels...)
+// wieldv2: for everything else (items that arent tools or items with no handles)
+// if someone could make the wieldv2 look closer to og model that would be nice
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.items.wieldv1": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            "c.is_first_person ? -0.843 : 0.0",
+            "c.is_first_person ? 2.95 : -1.0",
+            "c.is_first_person ? 0.843 : -7.0"
+          ],
+          "rotation": [
+            { "x": "c.is_first_person ? -90.0 : 85.0" },
+            { "z": "c.is_first_person ? -90.0 : -92.0" },
+            { "y": "c.is_first_person ? 25.0 : -50.0" }
+          ],
+          "scale": "c.is_first_person ? 0.74 : 0.95"
+        }
+      }
+    },
+    "animation.items.wieldv2": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            "c.is_first_person ? -1.13 : 2.0",
+            "c.is_first_person ? 3.2 : 0.0",
+            "c.is_first_person ? 1.13 : -5.5"
+          ],
+          "rotation": [
+            { "x": "c.is_first_person ? -90.0 : -15.0" },
+            { "z": "c.is_first_person ? -90.0 : 20.0" },
+            { "y": "c.is_first_person ? 25.0 : 0.0" }
+          ],
+          "scale": "c.is_first_person ? 0.68 : 0.55"
+        }
+      }
+    }
+  }
+}

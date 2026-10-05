@@ -1,0 +1,6 @@
+{
+  "ui_defs": [
+    ////////*/ Item Renderer for Animated Items /*////////
+    "ui/ui/item_renderer.json"
+  ]
+}

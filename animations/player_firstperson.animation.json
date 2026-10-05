@@ -1,0 +1,106 @@
+/*
+* ambiennt
+* https://github.com/ambiennt
+*/
+// thx tortle
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.first_person_attack_rotation_flipbook_item": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [
+						"math.sin(math.sqrt(v.attack_time) * 180.0) * -9.0", // closest i could get to og item attack rotation - polr
+						"math.sin(math.sqrt(v.attack_time) * 360.0) * 4", // closest i could get to og item attack rotation - polr
+						"math.sin(v.attack_time * 180.0) * 3.2"
+					],
+					"rotation": [
+						{ "y": "(math.sin(math.pow(v.attack_time, 2.0) * 180.0) * 20.0) + -45.0" },
+						{ "z": "math.sin(math.sqrt(v.attack_time) * 180.0) * -20.0" },
+						{ "x": "math.sin(math.sqrt(v.attack_time) * 180.0) * 80.0" },
+						{ "y": 45.0 }
+					]
+				}
+			}
+		},
+		"animation.player.first_person_main_hand_flipbook_item": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"rightarm": {
+					"position": [
+						"-this",
+						"v.short_arm_offset_right + -22.0",
+						"-this"
+					],
+					"rotation": [
+						"-this",
+						"-this",
+						"-this"
+					]
+				},
+				"rightitem": {
+					"position": [
+						"8.96 - this",
+						"19.2 - this",
+						"11.52 - this"
+					],
+					"rotation": [
+						"-this",
+						"180.0 - this",
+						"-this"
+					]
+				}
+			}
+		},
+		"animation.player.first_person_swap_flipbook_item": {
+		"loop": true,
+			"bones": {
+				"leftarm": {
+				"position": [
+					0,
+					"query.get_equipped_item_name(1) == 'filled_map' ? 0.0 : (1.0 - variable.player_arm_height) * -10.0",
+					0
+				]
+				},
+				"rightarm": {
+				"position": [
+					0,
+					"(1.0 - variable.player_arm_height) * -10.0",
+					0
+				]
+				}
+			}
+		},
+		"animation.player.first_person.base_pose": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [
+						"-this",
+						0,
+						"-this"
+					],
+					"rotation": [
+						"q.target_x_rotation - this",
+						"q.target_y_rotation - this",
+						"-this"
+					]
+				},
+				"waist": {
+					"position": [
+						"-this",
+						0,
+						"-this"
+					],
+					"rotation": [
+						"-this",
+						"-this",
+						"-this"
+					]
+				}
+			}
+		}
+	}
+}

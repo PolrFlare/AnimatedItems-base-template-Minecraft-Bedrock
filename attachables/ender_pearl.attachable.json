@@ -1,0 +1,65 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:attachable": {
+		"description": {
+      "min_engine_version": "1.8.0",
+			"identifier": "minecraft:ender_pearl",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+      "textures": {
+          "default": "textures/items/ender_pearl",
+          "item_frame_1": "textures/items/flipbook/ender_pearl/frame_1",
+          "item_frame_2": "textures/items/flipbook/ender_pearl/frame_2",
+          "item_frame_3": "textures/items/flipbook/ender_pearl/frame_3",
+          "item_frame_4": "textures/items/flipbook/ender_pearl/frame_4",
+          "item_frame_5": "textures/items/flipbook/ender_pearl/frame_5",
+          "item_frame_6": "textures/items/flipbook/ender_pearl/frame_6",
+          "item_frame_7": "textures/items/flipbook/ender_pearl/frame_7",
+          "item_frame_8": "textures/items/flipbook/ender_pearl/frame_8",
+          "item_frame_9": "textures/items/flipbook/ender_pearl/frame_9",
+          "item_frame_10": "textures/items/flipbook/ender_pearl/frame_10",
+          "item_frame_11": "textures/items/flipbook/ender_pearl/frame_11",
+          "item_frame_12": "textures/items/flipbook/ender_pearl/frame_12",
+          "item_frame_13": "textures/items/flipbook/ender_pearl/frame_13",
+          "item_frame_14": "textures/items/flipbook/ender_pearl/frame_14",
+          "item_frame_15": "textures/items/flipbook/ender_pearl/frame_15",
+          "item_frame_16": "textures/items/flipbook/ender_pearl/frame_16",
+          "item_frame_17": "textures/items/flipbook/ender_pearl/frame_17",
+          "item_frame_18": "textures/items/flipbook/ender_pearl/frame_18",
+          "item_frame_19": "textures/items/flipbook/ender_pearl/frame_19",
+          "item_frame_20": "textures/items/flipbook/ender_pearl/frame_20",
+          "item_frame_21": "textures/items/flipbook/ender_pearl/frame_21",
+          "item_frame_22": "textures/items/flipbook/ender_pearl/frame_22",
+          "item_frame_23": "textures/items/flipbook/ender_pearl/frame_23",
+          "item_frame_24": "textures/items/flipbook/ender_pearl/frame_24",
+          "item_frame_25": "textures/items/flipbook/ender_pearl/frame_25"
+      },
+      "geometry": {
+        "default": "geometry.items",
+        "entity": "geometry.item_sprite" // for the ender pearl projectile entity (thrown)
+      },
+      "animations": {
+        "wield": "animation.items.wieldv2",
+        "flying": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "wield",
+					{
+						"flying": "!query.is_attached" // for the ender pearl projectile entity (thrown)
+					}
+        ]
+      },
+			"render_controllers": [
+        {
+            "controller.render.ender_pearl": "query.is_attached"
+        },
+        {
+            "controller.render.ender_pearl_entity": "!query.is_attached" // for the ender pearl projectile entity (thrown)
+        }
+			]
+		}
+	}
+}

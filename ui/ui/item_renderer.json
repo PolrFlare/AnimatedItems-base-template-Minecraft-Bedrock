@@ -1,0 +1,88 @@
+/*
+* CrisXolt
+* https://x.com/CrisXolt
+*/
+// thank you cris for the insight
+{
+  "namespace": "item_renderer_xenon",
+
+  // leave this alone
+
+  "uv_base": {
+    "anim_type": "flip_book",
+    "orientation": "vertical",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": "$frame_count",
+    "fps": 10,
+    "easing": "linear"
+  },
+
+  "item_uv_size": [ 16, 16 ],
+
+  "item_base": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "layer": 1,
+    "texture": "$texture_path",
+    "uv": "@item_renderer_xenon.uv_base",
+    "uv_size": "$item_uv_size",
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#item_id_aux / 65536)",
+        "target_property_name": "#item_runtime_id"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#item_runtime_id = $number_item_id)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // this is where normies edit:
+
+  "ender_pearl@item_renderer_xenon.item_base": {
+    "$number_item_id": "$item_id_ender_pearl",
+    "$texture_path": "$item_texture_ender_pearl",
+    "$item_uv_size": [ 16, 16 ],
+    "$frame_count": 25 // the ender_pearl.png in items/flipbook/ender_pearl/ has 25 frames vertically stacked, hence the 25 frame count
+  },
+  "flint_and_steel@item_renderer_xenon.item_base": {
+    "$number_item_id": "$item_id_flint_and_steel",
+    "$texture_path": "$item_texture_flint_and_steel",
+    "$item_uv_size": [ 32, 32 ], // the flint_and_steel.png in items/flipbook/flint_and_steel/ has a 32x base width, hence the 32x32 uv size
+    "$frame_count": 12
+  },
+
+  "overlay": {
+    "type": "panel",
+    "$item_layer|default": 1,
+    "controls": [
+      // if you are adding new items they need to be added just like this
+      { "ender_pearl@item_renderer_xenon.ender_pearl": { "$item_layer": "$item_layer" } },
+      { "flint_and_steel@item_renderer_xenon.flint_and_steel": { "$item_layer": "$item_layer" } }
+    ]
+  },
+
+  "item_renderer": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          // if you are adding new items they need to be added just like this
+          { "ender_pearl@item_renderer_xenon.ender_pearl": { } },
+          { "flint_and_steel@item_renderer_xenon.flint_and_steel": { } }
+        ]
+      }
+    ]
+  }
+}
