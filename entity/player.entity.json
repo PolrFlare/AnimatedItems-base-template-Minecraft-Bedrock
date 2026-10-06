@@ -16,8 +16,7 @@
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
-        "cape": "geometry.cape",
-        "player_armor_custom": "geometry.player_armor_custom"
+        "cape": "geometry.cape"
       },
       "scripts": {
         "scale": "0.9375",
